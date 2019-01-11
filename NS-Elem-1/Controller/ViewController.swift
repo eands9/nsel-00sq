@@ -23,8 +23,6 @@ class ViewController: UIViewController {
     var timer = Timer()
     var counter = 0.0
 
-    var randomNumA : Int = 0
-    var randomNumB : Int = 0
     var questionTxt : String = ""
     var answerCorrect : Int = 0
     var answerUser : Int = 0
@@ -49,11 +47,9 @@ class ViewController: UIViewController {
     }
     
     func askQuestion(){
-        randomNumA = Int.random(in: 11 ..< 100)
-        randomNumB = Int.random(in: 6 ..< 100)
-
-        questionLabel.text = "\(randomNumA) X \(randomNumB)"
-        answerCorrect = randomNumA * randomNumB
+        let numA = Int.random(in: 7 ..< 100)
+        questionLabel.text = "\(numA)²"
+        answerCorrect = numA * numA
     }
     
     @IBAction func showBtn(_ sender: Any) {
